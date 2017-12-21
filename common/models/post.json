@@ -1,0 +1,52 @@
+{
+  "name": "Post",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "scope": {
+    "include": "audiences"
+  },
+  "properties": {
+    "incognito": {
+      "type": "boolean",
+      "default": false
+    },
+    "approved": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "author": {
+      "type": "belongsTo",
+      "polymorphic": true
+    },
+    "postEntity": {
+      "type": "belongsTo",
+      "polymorphic": true
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "Comment",
+      "polymorphic": "target"
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "Like",
+      "polymorphic": "target"
+    },
+    "audiences": {
+      "type": "hasMany",
+      "model": "Audience",
+      "polymorphic": "target"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Newscast",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "post": {
+      "type": "hasOne",
+      "model": "Post",
+      "polymorphic": "postEntity"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

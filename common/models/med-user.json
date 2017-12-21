@@ -1,0 +1,141 @@
+{
+  "name": "MedUser",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "approved": {
+      "type": "boolean",
+      "default": false
+    },
+    "moreProof": {
+      "type": "boolean",
+      "default": false
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "phones": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "birthday": {
+      "type": "date",
+      "required": true
+    },
+    "area": {
+      "type": "string",
+      "required": true,
+      "default": "medicine"
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "student"
+    },
+    "degree": {
+      "type": "string",
+      "required": true,
+      "default": "1"
+    },
+    "military": {
+      "type": "boolean",
+      "default": false
+    },
+    "private": {
+      "type": "boolean",
+      "default": false
+    },
+    "medDocuments": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "photo": {
+      "type": "string",
+      "default": "e.g.:/CustomerAvatars/default-avatar/download/male.png"
+    },
+    "maritalStatus": {
+      "type": "string",
+      "default": "single"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "university": {
+      "type": "belongsTo",
+      "model": "University",
+      "foreignKey": ""
+    },
+    "hospital": {
+      "type": "belongsTo",
+      "model": "Hospital",
+      "foreignKey": ""
+    },
+    "specialty": {
+      "type": "belongsTo",
+      "model": "Specialty",
+      "foreignKey": ""
+    },
+    "city": {
+      "type": "belongsTo",
+      "model": "City",
+      "foreignKey": ""
+    },
+    "account": {
+      "type": "hasOne",
+      "model": "Account",
+      "polymorphic": "user"
+    },
+    "posts": {
+      "type": "hasMany",
+      "model": "Post",
+      "polymorphic": "author"
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "Comment",
+      "polymorphic": "author"
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "Like",
+      "polymorphic": "author"
+    },
+    "SavedPosts": {
+      "type": "referencesMany",
+      "model": "Post",
+      "foreignKey": "savedPosts"
+    },
+    "pools": {
+      "type": "hasMany",
+      "model": "Pool",
+      "polymorphic": "author"
+    },
+    "answers": {
+      "type": "hasMany",
+      "model": "Answer",
+      "foreignKey": "authorId"
+    },
+    "votes": {
+      "type": "hasMany",
+      "model": "Vote",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

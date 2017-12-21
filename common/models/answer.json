@@ -1,0 +1,37 @@
+{
+  "name": "Answer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "pool": {
+      "type": "belongsTo",
+      "model": "Pool",
+      "foreignKey": ""
+    },
+    "author": {
+      "type": "belongsTo",
+      "model": "MedUser",
+      "foreignKey": ""
+    },
+    "votes": {
+      "type": "hasMany",
+      "model": "Vote",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

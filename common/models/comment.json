@@ -1,0 +1,45 @@
+{
+  "name": "Comment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "attachments": {
+      "type": [
+        "string"
+      ],
+      "default": []
+    }
+  },
+  "validations": [],
+  "relations": {
+    "author": {
+      "type": "belongsTo",
+      "polymorphic": true
+    },
+    "target": {
+      "type": "belongsTo",
+      "polymorphic": true
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "Like",
+      "polymorphic": "target"
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "Comment",
+      "polymorphic": "target"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

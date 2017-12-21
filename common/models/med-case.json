@@ -1,0 +1,58 @@
+{
+  "name": "MedCase",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "sex": {
+      "type": "string",
+      "default": "male"
+    },
+    "age": {
+      "type": "number",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "solved": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "post": {
+      "type": "hasOne",
+      "model": "Post",
+      "polymorphic": "postEntity"
+    },
+    "Specialties": {
+      "type": "referencesMany",
+      "model": "Specialty",
+      "foreignKey": "specialties"
+    },
+    "pools": {
+      "type": "hasMany",
+      "model": "Pool",
+      "polymorphic": "target"
+    },
+    "bestComment": {
+      "type": "belongsTo",
+      "model": "Comment",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "City",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "group": {
+      "type": "hasOne",
+      "model": "Group",
+      "polymorphic": "automaticEntity"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

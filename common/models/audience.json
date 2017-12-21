@@ -1,0 +1,52 @@
+{
+  "name": "Audience",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "contacts": {
+      "type": "boolean",
+      "default": false
+    },
+    "userTypes": {
+      "type": [
+        "string"
+      ]
+    },
+    "dental": {
+      "type": "boolean",
+      "default": true
+    },
+    "medicine": {
+      "type": "boolean",
+      "default": true
+    },
+    "civil": {
+      "type": "boolean",
+      "default": false
+    },
+    "military": {
+      "type": "boolean",
+      "default": false
+    },
+    "public": {
+      "type": "boolean",
+      "default": false
+    },
+    "private": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "target": {
+      "type": "belongsTo",
+      "polymorphic": true
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

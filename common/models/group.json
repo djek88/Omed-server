@@ -1,0 +1,45 @@
+{
+  "name": "Group",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": true,
+      "default": "e.g.:/CustomerAvatars/default-avatar/download/male.png"
+    },
+    "automatic": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "automaticEntity": {
+      "type": "belongsTo",
+      "polymorphic": true
+    },
+    "Members": {
+      "type": "referencesMany",
+      "model": "MedUser",
+      "foreignKey": "members"
+    },
+    "audiences": {
+      "type": "hasMany",
+      "model": "Audience",
+      "polymorphic": "target"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

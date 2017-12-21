@@ -1,0 +1,53 @@
+{
+  "name": "Listing",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "priceAmount": {
+      "type": "number",
+      "default": 0
+    },
+    "priceCurrency": {
+      "type": "string",
+      "default": "USD"
+    },
+    "expired": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "post": {
+      "type": "hasOne",
+      "model": "Post",
+      "polymorphic": "postEntity"
+    },
+    "Specialties": {
+      "type": "referencesMany",
+      "model": "Specialty",
+      "foreignKey": "specialties"
+    },
+    "Cities": {
+      "type": "referencesMany",
+      "model": "City",
+      "foreignKey": "cities"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

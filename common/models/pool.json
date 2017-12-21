@@ -1,0 +1,58 @@
+{
+  "name": "Pool",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "canAddAnswer": {
+      "type": "boolean",
+      "default": false
+    },
+    "multipleAnswers": {
+      "type": "boolean",
+      "default": false
+    },
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "validityTime": {
+      "type": [
+        "object"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "author": {
+      "type": "belongsTo",
+      "polymorphic": true
+    },
+    "target": {
+      "type": "belongsTo",
+      "polymorphic": true
+    },
+    "audiences": {
+      "type": "hasMany",
+      "model": "Audience",
+      "polymorphic": "target"
+    },
+    "answers": {
+      "type": "hasMany",
+      "model": "Answer",
+      "foreignKey": ""
+    },
+    "votes": {
+      "type": "hasMany",
+      "model": "Vote",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

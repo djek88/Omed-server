@@ -1,0 +1,127 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Account": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "MedUser": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "University": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Hospital": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Specialty": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "City": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Group": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Post": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Like": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Comment": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "MedCase": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Listing": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Event": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Discussion": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Documents": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Offer": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Newscast": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Company": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Audience": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Pool": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Answer": {
+    "dataSource": "transient",
+    "public": true
+  },
+  "Vote": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}

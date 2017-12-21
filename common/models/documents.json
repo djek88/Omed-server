@@ -1,0 +1,27 @@
+{
+  "name": "Documents",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "text": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {
+    "post": {
+      "type": "hasOne",
+      "model": "Post",
+      "polymorphic": "postEntity"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

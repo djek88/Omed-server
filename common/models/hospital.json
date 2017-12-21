@@ -1,0 +1,31 @@
+{
+  "name": "Hospital",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "private": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "group": {
+      "type": "hasOne",
+      "model": "Group",
+      "polymorphic": "automaticEntity"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

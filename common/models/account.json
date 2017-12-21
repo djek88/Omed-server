@@ -1,0 +1,34 @@
+{
+  "name": "Account",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "excludeBaseProperties": [
+    "realm",
+    "username"
+  ],
+  "mixins": {
+    "TimeStamp": true
+  },
+  "properties": {
+    "isAdmin": {
+      "type": "boolean",
+      "default": false
+    },
+    "suspended": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "polymorphic": true
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
