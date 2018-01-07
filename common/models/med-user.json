@@ -9,13 +9,13 @@
     "TimeStamp": true
   },
   "properties": {
-    "approved": {
-      "type": "boolean",
-      "default": false
+    "type": {
+      "type": "string",
+      "required": true
     },
-    "moreProof": {
-      "type": "boolean",
-      "default": false
+    "area": {
+      "type": "string",
+      "required": true
     },
     "firstName": {
       "type": "string",
@@ -31,23 +31,20 @@
       ],
       "required": true
     },
+    "approved": {
+      "type": "boolean",
+      "default": false
+    },
+    "moreProof": {
+      "type": "boolean",
+      "default": false
+    },
     "birthday": {
       "type": "date",
-      "required": true
-    },
-    "area": {
-      "type": "string",
-      "required": true,
-      "default": "medicine"
-    },
-    "type": {
-      "type": "string",
-      "required": true,
-      "default": "student"
+      "defaultFn": "now"
     },
     "degree": {
       "type": "string",
-      "required": true,
       "default": "1"
     },
     "military": {

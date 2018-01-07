@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "nodemon .",
-    "posttest": "npm run lint && nsp check"
+    "posttest": "npm run lint && nsp check",
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server ~/Projects/Omed-client/src/app/shared/sdk/"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -22,6 +23,7 @@
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
+    "@mean-expert/loopback-sdk-builder": "^2.1.2",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
     "nodemon": "^1.12.6",
