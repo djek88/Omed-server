@@ -39,6 +39,10 @@
       "type": "boolean",
       "default": false
     },
+    "sex": {
+      "type": "string",
+      "default": "male"
+    },
     "birthday": {
       "type": "date",
       "defaultFn": "now"
@@ -59,7 +63,7 @@
       "type": [
         "string"
       ],
-      "required": true
+      "default": []
     },
     "photo": {
       "type": "string",
