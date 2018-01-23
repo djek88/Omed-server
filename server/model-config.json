@@ -123,5 +123,9 @@
   "Vote": {
     "dataSource": "db",
     "public": true
+  },
+  "Additional": {
+    "dataSource": "db",
+    "public": true
   }
 }

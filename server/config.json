@@ -18,5 +18,14 @@
       "limit": "100kb"
     },
     "cors": false
+  },
+  "medDocument": {
+    "maxSize": 15,
+    "supportedTypes": {
+      ".jpg": "image/jpeg",
+      ".png": "image/png",
+      ".pdf": "application/pdf",
+      ".heic": "image/heic"
+    }
   }
 }
