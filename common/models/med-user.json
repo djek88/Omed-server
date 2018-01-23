@@ -61,7 +61,7 @@
     },
     "medDocuments": {
       "type": [
-        "string"
+        "object"
       ],
       "default": []
     },
@@ -137,6 +137,15 @@
       "foreignKey": ""
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "uploadMedDocument"
+      ]
+    }
+  ],
   "methods": {}
 }

@@ -124,6 +124,10 @@
     "dataSource": "db",
     "public": true
   },
+  "MedUserMedDocument": {
+    "dataSource": "medUserMedDocumentsStorage",
+    "public": true
+  },
   "Additional": {
     "dataSource": "db",
     "public": true
