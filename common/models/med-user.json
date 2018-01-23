@@ -39,6 +39,10 @@
       "type": "boolean",
       "default": false
     },
+    "sex": {
+      "type": "string",
+      "default": "male"
+    },
     "birthday": {
       "type": "date",
       "defaultFn": "now"
@@ -57,9 +61,9 @@
     },
     "medDocuments": {
       "type": [
-        "string"
+        "object"
       ],
-      "required": true
+      "default": []
     },
     "photo": {
       "type": "string",
@@ -133,6 +137,15 @@
       "foreignKey": ""
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "uploadMedDocument"
+      ]
+    }
+  ],
   "methods": {}
 }

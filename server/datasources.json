@@ -1,9 +1,9 @@
 {
-  "db": {
+  "memory": {
     "name": "db",
     "connector": "memory"
   },
-  "mongodb": {
+  "db": {
     "host": "localhost",
     "port": 27017,
     "url": "",
@@ -16,5 +16,12 @@
   "transient": {
     "name": "transient",
     "connector": "transient"
+  },
+  "medUserMedDocumentsStorage": {
+    "name": "medUserMedDocumentsStorage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage/medUserMedDocumentsStorage",
+    "nameConflict": "makeUnique"
   }
 }

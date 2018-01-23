@@ -37,83 +37,83 @@
     "public": false
   },
   "Account": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "MedUser": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "University": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Hospital": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Specialty": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "City": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Group": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Post": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Like": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Comment": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "MedCase": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Listing": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Event": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Discussion": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Documents": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Offer": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Newscast": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Company": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Audience": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Pool": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": true
   },
   "Answer": {
@@ -121,7 +121,15 @@
     "public": true
   },
   "Vote": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
+    "public": true
+  },
+  "MedUserMedDocument": {
+    "dataSource": "medUserMedDocumentsStorage",
+    "public": true
+  },
+  "Additional": {
+    "dataSource": "db",
     "public": true
   }
 }
