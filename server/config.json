@@ -19,6 +19,9 @@
     },
     "cors": false
   },
+  "client": {
+    "domain": "localhost:3001"
+  },
   "medDocument": {
     "maxSize": 15,
     "supportedTypes": {

@@ -1,15 +1,15 @@
 {
   "memory": {
-    "name": "db",
+    "name": "memory",
     "connector": "memory"
   },
   "db": {
+    "name": "db",
     "host": "localhost",
     "port": 27017,
     "url": "",
     "database": "Omed",
     "password": "",
-    "name": "mongodb",
     "user": "",
     "connector": "mongodb"
   },
@@ -23,5 +23,19 @@
     "provider": "filesystem",
     "root": "./server/storage/medUserMedDocumentsStorage",
     "nameConflict": "makeUnique"
+  },
+  "emailDs": {
+    "name": "emailDs",
+    "connector": "mail",
+    "transports": [{
+      "type": "smtp",
+      "host": "smtp.gmail.com",
+      "secure": true,
+      "port": 465,
+      "auth": {
+        "user": "zarybinskiu11@gmail.com",
+        "pass": "qwertyuiop11"
+      }
+    }]
   }
 }
