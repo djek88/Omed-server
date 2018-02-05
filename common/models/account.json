@@ -3,11 +3,11 @@
   "base": "User",
   "idInjection": true,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "caseSensitiveEmail": false
   },
   "excludeBaseProperties": [
-    "realm",
-    "username"
+    "realm"
   ],
   "mixins": {
     "TimeStamp": true
