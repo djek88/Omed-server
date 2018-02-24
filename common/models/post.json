@@ -19,6 +19,18 @@
     "approved": {
       "type": "boolean",
       "default": true
+    },
+    "images": {
+      "type": [
+        "object"
+      ],
+      "default": []
+    },
+    "files": {
+      "type": [
+        "object"
+      ],
+      "default": []
     }
   },
   "validations": [],
@@ -47,6 +59,16 @@
       "polymorphic": "target"
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "uploadImage",
+        "uploadFile"
+      ]
+    }
+  ],
   "methods": {}
 }

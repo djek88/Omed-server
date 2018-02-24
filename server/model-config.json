@@ -131,6 +131,14 @@
     "dataSource": "medUserMedDocumentsStorage",
     "public": true
   },
+  "PostImage": {
+    "dataSource": "postImagesStorage",
+    "public": true
+  },
+  "PostFile": {
+    "dataSource": "postFilesStorage",
+    "public": true
+  },
   "Additional": {
     "dataSource": "db",
     "public": true

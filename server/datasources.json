@@ -24,6 +24,20 @@
     "root": "./server/storage/medUserMedDocumentsStorage",
     "nameConflict": "makeUnique"
   },
+  "postImagesStorage": {
+    "name": "postImagesStorage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage/postImagesStorage",
+    "nameConflict": "makeUnique"
+  },
+  "postFilesStorage": {
+    "name": "postFilesStorage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage/postFilesStorage",
+    "nameConflict": "makeUnique"
+  },
   "emailDs": {
     "name": "emailDs",
     "connector": "mail",
