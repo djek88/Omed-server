@@ -120,7 +120,7 @@
     "public": true
   },
   "Answer": {
-    "dataSource": "transient",
+    "dataSource": "db",
     "public": true
   },
   "Vote": {
